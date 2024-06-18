@@ -443,7 +443,7 @@ class _Home_screenState extends State<Home_screen> {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            "Homeless",
+            "Second Chance Support",
             style: TextStyle(color: Colors.white),
           ),
           bottom: PreferredSize(
@@ -618,6 +618,7 @@ class _Home_screenState extends State<Home_screen> {
                           return GridView.builder(
                             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: (MediaQuery.of(context).size.width > 600) ? 5 : 2, // Adjust the crossAxisCount based on screen width
+                              childAspectRatio: .78
                             ),
                             itemCount: filterList.length,
                             itemBuilder: (BuildContext context, int index) {
@@ -632,7 +633,7 @@ class _Home_screenState extends State<Home_screen> {
                                   child: Column(
                                     children: [
                                       SizedBox(
-                                        height: 50,
+                                        height: 60,
                                         child: ClipRRect(
                                           child: Image.network(filterList[index]['profileImageUrl']),
                                         ),

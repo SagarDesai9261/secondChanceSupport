@@ -211,7 +211,7 @@ class _DonorSProfileState extends State<DonorSProfile> {
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("Organization Name",style: TextStyle(fontSize: 15,color: Color(0xFF43BA82),fontWeight: FontWeight.bold),),
+                                    Text("Organization Name",style: TextStyle(fontSize: 13,color: Color(0xFF43BA82),fontWeight: FontWeight.bold),),
                                     SizedBox(
                                       width: MediaQuery.of(context).size.width * .4,
                                       height: 30,
@@ -395,6 +395,41 @@ class _DonorSProfileState extends State<DonorSProfile> {
                         padding: EdgeInsets.symmetric(horizontal: 15),
                         child: Text("Save",style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color: Colors.white),)
                     ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  TextButton(onPressed: (){
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          title: Text("Confirm Account Deletion"),
+                          content: Text("Are you sure you want to delete your account?"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop(); // Close the dialog
+                              },
+                              child: Text("Cancel"),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                // Perform the account deletion here
+                              //  deleteAccount();
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("We received the details for account deletion request 2 to 5 working days to delete account")));
+                                Navigator.of(context).pop(); // Close the dialog
+                              },
+                              child: Text("Delete"),
+                            ),
+                          ],
+                        );
+                      },
+                    );
+
+                  }, child: Text("Delete Account",style: TextStyle(color: Colors.red),)),
+                  const SizedBox(
+                    height: 80,
                   ),
 
                 ],

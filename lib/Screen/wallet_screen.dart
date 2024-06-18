@@ -27,9 +27,7 @@ class _Wallet_pageState extends State<Wallet_page> {
         title: const Text("Wallet"),
         backgroundColor: Colors.grey[50],
         foregroundColor: Colors.black,
-        actions: [
-          IconButton(onPressed: (){}, icon: const Icon(Icons.more_vert))
-        ],
+
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -59,7 +57,7 @@ class _Wallet_pageState extends State<Wallet_page> {
                       fontSize: 36,
                       fontFamily: 'SF Pro Text',
                       fontWeight: FontWeight.w800,
-                      height: 0.03,
+                      height: 1,
                     ),
                   ),
                   Text(
@@ -518,9 +516,9 @@ class _Wallet_pageState extends State<Wallet_page> {
                         ),
                       ),*/
 
-                      Container(
+                    /*  Container(
                           padding: EdgeInsets.all(10),
-                          child: Image.asset("assets/google_ad.png"))
+                          child: Image.asset("assets/google_ad.png"))*/
                   ],
                 ),
               ),

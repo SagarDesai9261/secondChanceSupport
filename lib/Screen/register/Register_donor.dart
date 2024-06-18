@@ -222,6 +222,7 @@ class _Register_donorState extends State<Register_donor> {
                     LengthLimitingTextInputFormatter(10),
                   ],
                   controller: phone,
+                  textInputAction:TextInputAction.done,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       fillColor: Color(0x1943BA82),
@@ -502,7 +503,7 @@ class _Register_donorState extends State<Register_donor> {
                 }
               },
               child: Container(
-                  width: 200,
+                  width: 230,
                   height: 50,
                   decoration: ShapeDecoration(
                     color: Color(0xFF46BA80),
@@ -510,15 +511,17 @@ class _Register_donorState extends State<Register_donor> {
                         borderRadius: BorderRadius.circular(8)),
                   ),
                   child: isloading == false
-                      ? Text('Sign up your Account',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                            fontFamily: 'SF Pro Text',
-                            fontWeight: FontWeight.w600,
-                            height: 2,
-                          ))
+                      ? Center(
+                        child: Text('Sign up your Account',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 16,
+                              fontFamily: 'SF Pro Text',
+                              fontWeight: FontWeight.w600,
+                              height: 2,
+                            )),
+                      )
                       : Center(
                           child: CircularProgressIndicator(
                           color: Colors.white,

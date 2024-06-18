@@ -198,7 +198,8 @@ class _Account_typeState extends State<Account_type> {
                   ),
                 ),
               ),
-              SizedBox(height: height * .05,),
+              //SizedBox(height: height * .04,),
+              //SizedBox(height: height * .04,),
               if(height > 700)
               SizedBox(
                 height: MediaQuery.of(context).size.height * .07,
@@ -242,15 +243,17 @@ class _Account_typeState extends State<Account_type> {
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8)),
                     ),
-                    child: Text('Continue',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontFamily: 'SF Pro Text',
-                          fontWeight: FontWeight.w600,
-                          height: 2,
-                        ))),
+                    child: Center(
+                      child: Text('Continue',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontFamily: 'SF Pro Text',
+                            fontWeight: FontWeight.w600,
+                            height: 2,
+                          )),
+                    )),
               ),
             ],
           ),

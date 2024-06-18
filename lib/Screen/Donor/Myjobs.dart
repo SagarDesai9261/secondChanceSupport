@@ -49,7 +49,7 @@ class MyJobs extends StatelessWidget {
         appBar: AppBar(
 
           centerTitle: true,
-          title: Text('Homeless',style: TextStyle(
+          title: Text('Second Chance Support',style: TextStyle(
               color: Colors.black
           ),),
           elevation: 0,

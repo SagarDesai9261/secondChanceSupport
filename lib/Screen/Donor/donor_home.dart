@@ -126,10 +126,11 @@ class _CustomInfoWindowExampleState extends State<CustomInfoWindowExample> {
                     ),
                     Positioned(
                       top: 232,
-                      left: 46,
+                      left: 35,
                       child: SizedBox(
                         height: 20,
                         child: ElevatedButton(
+
                           onPressed: () {
                             Navigator.push(context,MaterialPageRoute(builder: (context)=>DonationPage(id: data.docId,)));
                             // Handle button click for this marker here
@@ -139,6 +140,7 @@ class _CustomInfoWindowExampleState extends State<CustomInfoWindowExample> {
                             style: TextStyle(color: Colors.white, fontSize: 14),
                           ),
                           style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(30),
                             ),
@@ -302,7 +304,7 @@ class _CustomInfoWindowExampleState extends State<CustomInfoWindowExample> {
         appBar: AppBar(
           centerTitle: true,
           title: Text(
-            'Homeless',
+            'Second Chance Support',
             style: TextStyle(color: Colors.black),
           ),
           elevation: 0,

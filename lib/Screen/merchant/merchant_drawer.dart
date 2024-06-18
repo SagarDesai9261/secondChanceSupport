@@ -4,11 +4,13 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 
+
 import 'package:quickalert/models/quickalert_type.dart';
 import 'package:quickalert/widgets/quickalert_dialog.dart';
 
 import '../account_type.dart';
 import '../privacy_policy.dart';
+import 'Merchant_profile.dart';
 import 'Myjobs.dart';
 import 'chat_person.dart';
 import 'wallet_screen.dart';
@@ -109,21 +111,15 @@ class _AppDrawerState extends State<AppDrawer> {
             ListTile(
               title: Text('My Profile'),
               onTap: () {
-             //   Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
+              //  Navigator.push(context, MaterialPageRoute(builder: (context)=>ProfileScreen()));
                 // Handle My Profile screen navigation
                 //  Navigator.pop(context); // Close the drawer
               },
             ),
             Divider(),
-            ListTile(
-              title: Text('Request Payment'),
-              onTap: () {
-                //   Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>MyDonation()));
-                // Handle My Donations screen navigation
-                // Navigator.pop(context); // Close the drawer
-              },
-            ),
-            Divider(),
+
+
             ListTile(
               title: Text('My Wallet'),
               onTap: () {

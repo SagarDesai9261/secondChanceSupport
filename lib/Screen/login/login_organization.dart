@@ -28,6 +28,7 @@ class _Login_screen_OrganazitionState extends State<Login_screen_Organazition> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: SafeArea(
         child: Form(
@@ -70,7 +71,7 @@ class _Login_screen_OrganazitionState extends State<Login_screen_Organazition> {
                   ),
                   SingleChildScrollView(
                     child: Container(
-                      height: MediaQuery.of(context).size.height * .75,
+                      height: MediaQuery.of(context).size.width > 500? MediaQuery.of(context).size.height * .77:MediaQuery.of(context).size.height * .77,
                       width: double.infinity,
                       decoration: const BoxDecoration(
                           color: Colors.white,
@@ -254,7 +255,7 @@ class _Login_screen_OrganazitionState extends State<Login_screen_Organazition> {
 
                             },
                             child: Container(
-                                width: 200,
+                                width: 250,
                                 height: 50,
                                 decoration: ShapeDecoration(
                                   color: const Color(0xFF46BA80),
@@ -262,15 +263,17 @@ class _Login_screen_OrganazitionState extends State<Login_screen_Organazition> {
                                       borderRadius: BorderRadius.circular(8)),
                                 ),
                                 child: isloading == false
-                                    ? const Text('Sign up your Account',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontFamily: 'SF Pro Text',
-                                      fontWeight: FontWeight.w600,
-                                      height: 2,
-                                    ))
+                                    ? Center(
+                                      child: const Text('Sign up your Account',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontFamily: 'SF Pro Text',
+                                        fontWeight: FontWeight.w600,
+                                        height: 2,
+                                      )),
+                                    )
                                     : const Center(
                                     child: CircularProgressIndicator(
                                       color: Colors.white,

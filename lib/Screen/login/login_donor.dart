@@ -70,7 +70,7 @@ class _Login_screen_OrganazitionState extends State<Login_screen_donor> {
                   ),
                   SingleChildScrollView(
                     child: Container(
-                      height: MediaQuery.of(context).size.height * .75,
+                      height: MediaQuery.of(context).size.height * .77,
                       width: double.infinity,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -253,7 +253,7 @@ class _Login_screen_OrganazitionState extends State<Login_screen_donor> {
 
                             },
                             child: Container(
-                                width: 200,
+                                width: 250,
                                 height: 50,
                                 decoration: ShapeDecoration(
                                   color: Color(0xFF46BA80),
@@ -261,15 +261,17 @@ class _Login_screen_OrganazitionState extends State<Login_screen_donor> {
                                       borderRadius: BorderRadius.circular(8)),
                                 ),
                                 child: isloading == false
-                                    ? Text('Sign up your Account',
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 18,
-                                          fontFamily: 'SF Pro Text',
-                                          fontWeight: FontWeight.w600,
-                                          height: 2,
-                                        ))
+                                    ? Center(
+                                      child: Text('Sign up your Account',
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 14,
+                                            fontFamily: 'SF Pro Text',
+                                            fontWeight: FontWeight.w600,
+                                            height: 2,
+                                          )),
+                                    )
                                     : Center(
                                         child: CircularProgressIndicator(
                                         color: Colors.white,

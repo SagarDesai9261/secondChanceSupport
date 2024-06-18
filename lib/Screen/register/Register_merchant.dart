@@ -307,12 +307,15 @@ class _Register_merchantState extends State<Register_merchant> {
                     }
                     return null;
                   },
+
                   inputFormatters: [
                     LengthLimitingTextInputFormatter(10),
                   ],
                   controller: phone,
+                  textInputAction: TextInputAction.done,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
+
                       fillColor: const Color(0x1943BA82),
                       filled: true,
                       hintText: "Phone",
@@ -469,15 +472,17 @@ class _Register_merchantState extends State<Register_merchant> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                 ),
-                child: const Text('Continue',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: 'SF Pro Text',
-                      fontWeight: FontWeight.w600,
-                      height: 2,
-                    ))),
+                child: Center(
+                  child: const Text('Continue',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'SF Pro Text',
+                        fontWeight: FontWeight.w600,
+                        height: 2,
+                      )),
+                )),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * .02,
@@ -879,15 +884,17 @@ class _Register_merchantState extends State<Register_merchant> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                 ),
-                child: const Text('Continue',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: 'SF Pro Text',
-                      fontWeight: FontWeight.w600,
-                      height: 2,
-                    ))),
+                child: Center(
+                  child: const Text('Continue',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'SF Pro Text',
+                        fontWeight: FontWeight.w600,
+                        height: 2,
+                      )),
+                )),
           ),
           SizedBox(
             height: MediaQuery.of(context).size.height * .02,
@@ -1152,15 +1159,17 @@ class _Register_merchantState extends State<Register_merchant> {
                         child: CircularProgressIndicator(
                         color: Colors.white,
                       ))
-                    : Text('Register',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontFamily: 'SF Pro Text',
-                          fontWeight: FontWeight.w600,
-                          height: 2,
-                        ))),
+                    : Center(
+                      child: Text('Register',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontFamily: 'SF Pro Text',
+                            fontWeight: FontWeight.w600,
+                            height: 2,
+                          )),
+                    )),
           ),
         ],
       ),

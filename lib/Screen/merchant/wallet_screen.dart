@@ -28,7 +28,7 @@ class _Wallet_pageState extends State<Wallet_page> {
         foregroundColor: Colors.black,
 
       ),
-      bottomNavigationBar:
+      //bottomNavigationBar:
 
          /* _bannerAd != null ?
             Align(
@@ -39,9 +39,9 @@ class _Wallet_pageState extends State<Wallet_page> {
                 child: AdWidget(ad: _bannerAd!),
               ),
             ):*/
-            Container(
+           /* Container(
                 padding: EdgeInsets.all(10),
-                child: Image.asset("assets/google_ad.png")),
+                child: Image.asset("assets/google_ad.png")),*/
 
       body: SingleChildScrollView(
         child: Column(
@@ -71,7 +71,7 @@ class _Wallet_pageState extends State<Wallet_page> {
                       fontSize: 36,
                       fontFamily: 'SF Pro Text',
                       fontWeight: FontWeight.w800,
-                      height: 0.03,
+                      height: 0.4,
                     ),
                   ),
                   Text(
@@ -90,7 +90,7 @@ class _Wallet_pageState extends State<Wallet_page> {
             ),
             Container(
               width: MediaQuery.of(context).size.width * .98,
-              height: MediaQuery.of(context).size.height * .7,
+              height: MediaQuery.of(context).size.height * .65,
               decoration: const ShapeDecoration(
                 color: Colors.white,
                 shape: RoundedRectangleBorder(

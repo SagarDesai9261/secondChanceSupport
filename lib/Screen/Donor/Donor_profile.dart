@@ -118,7 +118,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       appBar: AppBar(
 
         centerTitle: true,
-        title: Text('Homeless',style: TextStyle(
+        title: Text('Second Chance Support',style: TextStyle(
             color: Colors.black
         ),),
         elevation: 0,
@@ -560,6 +560,40 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ),
                           ),
+
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          TextButton(onPressed: (){
+                            showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Text("Confirm Account Deletion"),
+                                  content: Text("Are you sure you want to delete your account?"),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(context).pop(); // Close the dialog
+                                      },
+                                      child: Text("Cancel"),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        // Perform the account deletion here
+                                        //  deleteAccount();
+                                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("We received the details for account deletion request 2 to 5 working days to delete account")));
+                                        Navigator.of(context).pop(); // Close the dialog
+                                      },
+                                      child: Text("Delete"),
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
+
+                          }, child: Text("Delete Account",style: TextStyle(color: Colors.red),)),
+
 
                         ],
                       ),

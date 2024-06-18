@@ -316,6 +316,7 @@ class _Register_OrganizationState extends State<Register_Organization> {
                     LengthLimitingTextInputFormatter(10),
                   ],
                   controller: phone,
+                  textInputAction: TextInputAction.done,
                   keyboardType: TextInputType.number,
                   decoration: InputDecoration(
                       fillColor: Color(0x1943BA82),
@@ -471,15 +472,17 @@ class _Register_OrganizationState extends State<Register_Organization> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                 ),
-                child: Text('Continue',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: 'SF Pro Text',
-                      fontWeight: FontWeight.w600,
-                      height: 2,
-                    ))),
+                child: Center(
+                  child: Text('Continue',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'SF Pro Text',
+                        fontWeight: FontWeight.w600,
+                        height: 2,
+                      )),
+                )),
           ),
         ],
       ),
@@ -704,17 +707,19 @@ class _Register_OrganizationState extends State<Register_Organization> {
                         color: Colors.white,
                       ),
                     ) // Show the circular progress indicator
-                  : Text(
-                      'Register',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontFamily: 'SF Pro Text',
-                        fontWeight: FontWeight.w600,
-                        height: 2,
+                  : Center(
+                    child: Text(
+                        'Register',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18,
+                          fontFamily: 'SF Pro Text',
+                          fontWeight: FontWeight.w600,
+                          height: 2,
+                        ),
                       ),
-                    ),
+                  ),
             ),
           ),
         ),
@@ -964,15 +969,17 @@ class _Register_OrganizationState extends State<Register_Organization> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8)),
                 ),
-                child: Text('Continue',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                      fontFamily: 'SF Pro Text',
-                      fontWeight: FontWeight.w600,
-                      height: 2,
-                    ))),
+                child: Center(
+                  child: Text('Continue',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 18,
+                        fontFamily: 'SF Pro Text',
+                        fontWeight: FontWeight.w600,
+                        height: 2,
+                      )),
+                )),
           ),
         ],
       ),
@@ -982,7 +989,7 @@ class _Register_OrganizationState extends State<Register_Organization> {
   void _showImagePickerBottomSheet(BuildContext context) {
     showFlexibleBottomSheet<void>(
       minHeight: 0,
-      initHeight: 0.26,
+      initHeight: 0.3,
       maxHeight: 1,
       bottomSheetColor: Colors.white,
       context: context,

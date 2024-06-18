@@ -80,7 +80,7 @@ class _SearchDemoState extends State<SearchDemo> {
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: Text("Homeless",style: TextStyle(color: Colors.black),),
+      title: Text("Second Chance Support",style: TextStyle(color: Colors.black),),
       backgroundColor: Colors.white,
       iconTheme: IconThemeData(color: Colors.black),
       actions: [
@@ -285,7 +285,7 @@ class _SearchDemoState extends State<SearchDemo> {
                     return GridView.builder(
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                           crossAxisCount: 2,
-                          childAspectRatio: .8// Adjust as needed
+                          childAspectRatio: .78// Adjust as needed
                       ),
                       itemCount: profiles.length,
                       itemBuilder: (context, index) {

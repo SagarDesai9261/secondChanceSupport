@@ -148,16 +148,18 @@ import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'Screen/Donor/Donor_profile.dart';
+import 'Screen/merchant/Merchant_profile.dart';
 import 'Screen/splash_screen.dart';
 
-void main() async{
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+void main() {
+ 
 
   // Firebase messaging
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (_) => UserProfileProvider()),
+      ChangeNotifierProvider(create: (_) => merchantProfileProvider()),
+
     ],
     child: MyApp(),
   ),);
@@ -179,6 +181,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
 
     return MaterialApp(
+
         debugShowCheckedModeBanner: false,
         home: splash_screen());
   }
